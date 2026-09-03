@@ -15,13 +15,14 @@ public class MouvementRobot : MonoBehaviour
 
     private void Update()
     {
-        // TODO 1 : lire les axes Horizontal et Vertical.
-        // TODO 2 : créer et normaliser le vecteur direction.
+        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        direction = new Vector2(horizontal, vertical).normalized;
     }
 
     private void FixedUpdate()
     {
-        // TODO 3 : déplacer le Rigidbody2D selon la direction et la vitesse.
+        corps.MovePosition(corps.position + direction * vitesse * Time.fixedDeltaTime);
     }
 
     /*
