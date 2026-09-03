@@ -1,0 +1,41 @@
+using UnityEngine;
+
+public class Collecteur : MonoBehaviour
+{
+    [SerializeField] private int objectif = 3;
+    [SerializeField] private GameObject porteSortie;
+
+    private int batteriesCollectees = 0;
+
+    private void Start()
+    {
+        // TODO 1 : vérifier que la porte est assignée.
+        // TODO 2 : cacher la porte au lancement du jeu.
+    }
+
+    private void OnTriggerEnter2D(Collider2D autre)
+    {
+        // TODO 3 : vérifier que l'objet touché est une batterie.
+        // TODO 4 : augmenter le compteur et afficher la progression.
+        // TODO 5 : détruire uniquement la batterie touchée.
+        // TODO 6 : afficher la porte lorsque l'objectif est atteint.
+    }
+
+    /*
+     * BANQUE DE LIGNES — À REPLACER ET À INDENTER
+     *
+     * porteSortie.SetActive(true);
+     * Debug.Log($"Batteries : {batteriesCollectees}/{objectif}");
+     * if (porteSortie == null)
+     * Destroy(autre.gameObject);
+     * batteriesCollectees++;
+     * if (!autre.CompareTag("Batterie"))
+     * Debug.LogError("La porte de sortie n'est pas assignée.");
+     * return;
+     * if (batteriesCollectees >= objectif)
+     * porteSortie.SetActive(false);
+     * return;
+     * Debug.Log("PORTE DÉVERROUILLÉE !");
+     */
+}
+
