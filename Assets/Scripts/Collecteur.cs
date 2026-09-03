@@ -29,8 +29,9 @@ public class Collecteur : MonoBehaviour
             {
                 porteSortie.SetActive(true);
                 Debug.Log("PORTE DÉVERROUILLÉE !");
-            return ;
-            }
+            return;
+        }
+            
                 
         
         // TODO 4 : augmenter le compteur et afficher la progression.

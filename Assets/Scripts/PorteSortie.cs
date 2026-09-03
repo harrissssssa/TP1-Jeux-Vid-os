@@ -4,7 +4,12 @@ public class PorteSortie : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D autre)
     {
-        // TODO 1 : vérifier que l'objet possède le tag Player.
+        if (autre.CompareTag("Player"))
+        {
+            Destroy(autre.gameObject);
+            Debug.Log("MISSION RÉUSSIE !");
+            return;
+        }
         // TODO 2 : afficher le message de réussite.
         // TODO 3 : faire disparaître le joueur.
     }
